@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { FaWeightHanging } from 'react-icons/fa';
 
+import { FirebaseContext } from '../firebase/context/context';
+
 const HomePage = (props) => {
+	const { user } = useContext(FirebaseContext);
+
+	console.log(user);
+
 	return (
 		<div className={props.className}>
 			<h1>Workout Log On-Line</h1>
